@@ -1,3 +1,4 @@
+import React from 'react';
 import classes from './Box.module.css';
 import {checkedIcon} from "./check-bold.js";
 
