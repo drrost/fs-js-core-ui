@@ -1,0 +1,38 @@
+.container {
+    box-sizing: border-box;
+    height: 36px;
+    position: relative;
+    background: var(--bgColor);
+    width: 20px;
+    height: 20px;
+}
+
+.container svg {
+    margin: 2px;
+}
+
+.container:focus-visible {
+    outline: 2px solid #73DDFF;
+}
+
+.container:focus:not(:focus-visible) {
+    outline: none;
+}
+
+.borderedView {
+    position: absolute;
+    inset: 0px;
+    border: 1px solid #565656;
+    background: transparent;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.container:hover .borderedView {
+    border: 2px solid;
+}
+
+.container:active .borderedView {
+    border: 2px solid;
+    opacity: 70%;
+}
