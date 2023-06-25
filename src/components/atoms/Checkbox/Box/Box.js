@@ -1,5 +1,5 @@
 import classes from './Box.module.css';
-import {checkedIcon} from "./check-bold";
+import {checkedIcon} from "./check-bold.js";
 
 const Box = ({selected, focusable = true, onChange}) => {
 

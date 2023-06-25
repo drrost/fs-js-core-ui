@@ -1,8 +1,8 @@
 import React from 'react';
-import classes from './CheckboxV2.module.css';
-import Label from "../../Label/Label";
-import Box from "./Box/Box";
-import {getFullClassName} from "../../../../utils/Utils";
+import classes from './Checkbox.module.css';
+import Box from "./Box/Box.js";
+import {Label} from "../Label/Label.js";
+import {getFullClassName} from "../../../utils/utils.js";
 
 export const Checkbox = ({title, selected, focusable = true, className, onChange}) => {
 
