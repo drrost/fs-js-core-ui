@@ -1,6 +1,6 @@
 import classes from './JJComponent.module.css';
 
-const JJComponent = () => {
+export const JJComponent = () => {
     return (
         <div className={classes.container}>
             JJComponent
@@ -8,4 +8,4 @@ const JJComponent = () => {
     )
 }
 
-export default JJComponent
+// export default JJComponent
