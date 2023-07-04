@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import {Checkbox, Label} from "./lib";
+import {LabelSubtype, LabelType} from "./lib/components/atoms/Label/Label";
 
 const App = () => {
 
@@ -8,10 +9,42 @@ const App = () => {
     return (
         <>
             <Label
-                title={'Some text'}
-                type={'HEADING'}
-                subtype={'L'}
-            />
+                title={'Heading L'}
+                type={LabelType.HEADING}
+                subtype={LabelSubtype.L}
+            /><br/>
+            <Label
+                title={'Heading M'}
+                type={LabelType.HEADING}
+                subtype={LabelSubtype.M}
+            /><br/>
+            <Label
+                title={'Heading S'}
+                type={LabelType.HEADING}
+                subtype={LabelSubtype.S}
+            /><br/>
+
+            <Label
+                title={'Regular 20'}
+                type={LabelType.REGULAR}
+                subtype={LabelSubtype["20"]}
+            /><br/>
+            <Label
+                title={'Regular 18'}
+                type={LabelType.REGULAR}
+                subtype={LabelSubtype["18"]}
+            /><br/>
+            <Label
+                title={'Regular 16'}
+                type={LabelType.REGULAR}
+                subtype={LabelSubtype["16"]}
+            /><br/>
+            <Label
+                title={'Regular 12'}
+                type={LabelType.REGULAR}
+                subtype={LabelSubtype["12"]}
+            /><br/>
+
             <Checkbox
                 title={'Hit me'}
                 selected={checkboxSelected}

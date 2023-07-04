@@ -1,12 +1,20 @@
 import React from 'react';
 import classes from './Label.module.css';
 
-export const HEADING = 'heading';
-export const L = 'L';
-export const M = 'M';
-export const S = 'S';
+export const LabelType = {
+    HEADING: 'heading',
+    REGULAR: 'REGULAR'
+}
 
-export const REGULAR = 'regular';
+export const LabelSubtype = {
+    L: 'L',
+    M: 'M',
+    S: 'S',
+    12: 12,
+    16: 16,
+    18: 18,
+    20: 20,
+}
 
 export const FontType = {
     TITLE: 'title',
@@ -26,16 +34,16 @@ const getFullClassName = (className, underlined, truncate) => {
 
 export const Label = ({
     title, color,
-    type = REGULAR, subtype = '16',
+    type = LabelType.REGULAR, subtype = LabelSubtype["16"],
     bold = false, underlined = false, truncate = false,
     className, fontType
 }) => {
 
     const getLineHeight = () => {
-        if (subtype === L) {
+        if (subtype === LabelSubtype.L) {
             return '40px';
         }
-        if (subtype === '18' || subtype === '20') {
+        if (subtype === LabelSubtype["18"] || subtype === LabelSubtype["20"]) {
             return '24px';
         }
         if (subtype === '12') {
@@ -63,28 +71,28 @@ export const Label = ({
             return bold ? 700 : 400;
         }
         switch (type) {
-            case REGULAR:
+            case LabelType.REGULAR:
                 return 400;
-            case HEADING:
+            case LabelType.HEADING:
                 return 700;
         }
     }
 
     const getFontSize = () => {
         switch (subtype) {
-            case L:
+            case LabelSubtype.L:
                 return '36px';
-            case M:
+            case LabelSubtype.M:
                 return '28px';
-            case S:
+            case LabelSubtype.S:
                 return '20px';
-            case '20':
+            case LabelSubtype["20"]:
                 return '1.25rem'
-            case '18':
+            case LabelSubtype["18"]:
                 return '1.125rem'
-            case '16':
+            case LabelSubtype["16"]:
                 return '1rem'
-            case '12':
+            case LabelSubtype["12"]:
                 return '0.75rem'
         }
         return '16px';
