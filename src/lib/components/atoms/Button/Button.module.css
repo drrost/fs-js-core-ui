@@ -1,0 +1,105 @@
+.container {
+    background-color: var(--color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 8px 16px;
+    text-decoration: none;
+    height: 40px;
+    opacity: var(--opacity);
+}
+
+.container:active {
+    color: rgba(255, 255, 255, 70%);
+    opacity: 70%;
+}
+
+.container:focus {
+    outline: none;
+}
+
+.container:hover {
+    background-color: var(--shadeColor);
+}
+
+.container:disabled,
+.container[disabled] {
+    pointer-events: none;
+    background-color: #A8A8A8;
+}
+
+/* Secondary */
+.secondary {
+    background-color: white;
+    color: #565656;
+    border: 2px solid #565656;
+}
+
+.secondary:focus {
+    background: #FFFFFF;
+    color: #565656;
+}
+
+.secondary:hover {
+    background: #565656;
+    border: 2px solid #565656;
+    color: white;
+}
+
+.secondary:active {
+    color: rgba(255, 255, 255, 70%);
+}
+
+.secondary:disabled {
+    border: 2px solid #A8A8A8;
+    color: #A8A8A8;
+    background: white;
+}
+
+.titleLabel {
+    line-height: 20px;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+/* Destructive */
+
+.destructive {
+    border: 2px solid #E0091F;
+    background: white;
+    color: #E0091F;
+}
+
+.destructive:hover {
+    background: #E0091F;
+    color: white;
+}
+
+.contentContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.loadingImage {
+    margin-right: 5px;
+    composes: animatedRotation from '/src/index.css';
+}
+
+.container:focus-visible {
+    outline: 2px solid #73DDFF;
+}
+
+.container:focus:not(:focus-visible) {
+    outline: none;
+}
+
+.icon {
+    margin-right: 0.5rem;
+}
+
+.container:disabled .icon {
+    opacity: 70%
+}

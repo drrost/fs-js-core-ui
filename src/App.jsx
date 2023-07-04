@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {Checkbox, Label} from "./lib";
+import {Button, ButtonType, Checkbox, Label} from "./lib";
 import {LabelSubtype, LabelType} from "./lib/components/atoms/Label/Label";
 
 const App = () => {
@@ -50,6 +50,10 @@ const App = () => {
                 selected={checkboxSelected}
                 onChange={setCheckboxSelected}
             />
+
+            <Button type={ButtonType.PRIMARY} title={'PRIMARY'}/>
+            <Button type={ButtonType.SECONDARY} title={'SECONDARY'}/>
+            <Button type={ButtonType.DESTRUCTIVE} title={'DESTRUCTIVE'}/>
         </>
     )
 }
